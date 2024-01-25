@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="../assginment/CSS/style.css">
+    <link rel="javascript" href="../assginment/Js/main.js">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src="index.js"></script> -->
+
+    <script>
+       var items = JSON.parse(localStorage.getItem('items')) || [];
+        var email_item = JSON.parse(localStorage.getItem('email_item')) || [];
+        var qualification = JSON.parse(localStorage.getItem('qualification')) || [];
+
+        function add() {
+            var input = document.getElementById('name');
+            var input2 = document.getElementById('email');
+            var input3 = document.getElementById('qualification');
+            items.push(input.value);
+            email_item.push(input2.value);
+            localStorage.setItem('qualification', JSON.stringify(qualification));
+            localStorage.setItem('email_item', JSON.stringify(email_item));
+            localStorage.setItem('items', JSON.stringify(items));
+            input.value = ''
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- <h2>My First Page</h2>
+
+    <p id="trail"></p> -->
+
+    <!-- <script>
+        document.getElementById("trail").innerHTML = "Hello World!";
+
+        document.getElementById('name').innerText = localStorage.getItem("firstName");
+        document.getElementById('year').innerText = year + " " + currentDate;
+        /*setItem - set, getItem - get,removeItem- delete -- localstorage**/
+
+        /**parseInt - string to number*/
+        /*toString - number to string**/
+
+        localStorage.setItem("firstName", "Harjot");
+        localStorage.setItem("Age", 20);
+        localStorage.removeItem("Age");
+
+    </script> -->
+
+
+    <div class="form-card">
+        <form>
+            <div>
+                <label for="name">Name:</label>
+                <i class="fa-solid fa-house"></i>
+            </div>
+            <div>
+                <input type="text" id="name" name="name" placeholder="enter name">
+            </div>
+            <div>
+                <label for="password">Age:</label>
+            </div>
+            <div>
+                <input type="Age" id="Age" name="Age" placeholder="enter Age ">
+                <div>
+                    <label for="email">email:</label>
+                </div>
+                <input type="email" id="email" name="email" placeholder="enter email ">
+            </div>
+            <div>
+                <label for="Age">qualification:</label>
+            </div>
+            <div>
+                <input type="qualification" name="qualification" placeholder="qualification">
+            </div>
+            <div>
+                <label for="gender">gender:</label>
+            </div>
+            <input type="gender" name="gender" placeholder="enter gender">
+    </div>
+    <button onclick="add()">submit</button>
+    </form>
+
+    </div>
+
+    <div class="container">
+        <div class=" row ">
+            <div class="col-md-6">
+                <form method="post">
+                    <div class="form-group">
+                        <label for="usr">Name</label>
+                        <input type="text" class="form-control" id="usr" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="text" class="form-control" id="phone" placeholder="Enter your phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password</label>
+                        <input type="password" class="form-control" id="pwd" required>
+                    </div>
+                    <button type="submit " class="btn btn-success"
+                        formaction="../BootStrapTemplate/detail.html">Submit</button>
+
+                </form>
+            </div>
+        </div>
+
+    </div>     
+
+    <div class="container">
+        <div class="row">
+            <div class="form-card">
+                <form>
+                    <div class="head">
+                        <label for="frame" id="name" inputmode="text" placeholder="enter">Name
+
+                        </label>
+                        <input type="name" id="text" placeholder="Enter">
+                    </div>
+
+                    <div class="heads">
+                        <label for="frame" id="name" inputmode="text" placeholder="enter">Email
+
+                        </label>
+                        <input type="email" id="text" placeholder="Enter">
+                    </div>
+
+                    <div class="headt">
+                        <label for="frame" id="name" inputmode="text" placeholder="enter">qualification
+
+                        </label>
+                        <input type="qualification" id="text" placeholder="Enter">
+                    </div>
+
+                    <div class="button">
+                        <button type="submit">Submit</button>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var head = JSON.parse(localStorage.getItem('head')) || [];
+        var email_item = JSON.parse(localStorage.getItem('email_item')) || [];
+        var qualification = JSON.parse(localStorage.getItem('qualification')) || [];
+
+
+        function add() {
+            var input = document.getElementById('name');
+            var input2 = document.getElementById('email');
+            var input3 = document.getElementById('qualification');
+            items.push(input.value);
+            email_item.push(input2.value);
+            localStorage.setItem('qualification', JSON.stringify(qualification));
+            localStorage.setItem('email_item', JSON.stringify(email_item));
+            localStorage.setItem('head', JSON.stringify(head));
+            input.value = '';
+        }
+
+
+    </script>
+      
+
+      <script src="../assginment/Js/main.js"></script>
+</body>
+
+</html>
